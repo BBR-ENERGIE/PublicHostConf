@@ -15,7 +15,7 @@ $form.Text         = 'Grafana – Duplication de volume'
 $form.Size         = [Drawing.Size]::new(480,420)
 $form.StartPosition= 'CenterScreen'
 
-$lblIntro          = [Windows.Forms.Label]@{Text='Entrez les paramètres SSH :';Location='10,10';Size='440,20'}
+$lblIntro          = [Windows.Forms.Label]@{Text='Entrez les configs SSH :';Location='10,10';Size='440,20'}
 $form.Controls.Add($lblIntro)
 
 # --- champs source
@@ -34,10 +34,10 @@ $form.Controls.AddRange(@($lblDstHost,$txtDstHost,$lblDstUser,$txtDstUser))
 
 # --- clé privée (facultative)
 $lblKey = [Windows.Forms.Label]@{
-    Text='Chemin clé privée (.pem) – vide = agent / mot de passe :'
+    Text='(Facultatif) Chemin clé privée (.pem):'
     Location='10,180';Size='440,20'}
 $txtKey = [Windows.Forms.TextBox]@{Location='10,200';Size='410,20'}
-$btnBrowse = [Windows.Forms.Button]@{Text='Parcourir...';Location='425,198';Size='30,24'}
+$btnBrowse = [Windows.Forms.Button]@{Text='+';Location='425,198';Size='30,24'}
 $form.Controls.AddRange(@($lblKey,$txtKey,$btnBrowse))
 
 $ofd = New-Object Windows.Forms.OpenFileDialog
