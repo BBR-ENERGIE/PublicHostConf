@@ -34,7 +34,7 @@ $form.Controls.AddRange(@($lblDstHost,$txtDstHost,$lblDstUser,$txtDstUser))
 
 # --- clé privée (facultative)
 $lblKey = [Windows.Forms.Label]@{
-    Text='(Facultatif) Chemin clé privée (.pem):'
+    Text='(Facultatif) Chemin SSH Key (.pem):'
     Location='10,180';Size='440,20'}
 $txtKey = [Windows.Forms.TextBox]@{Location='10,200';Size='410,20'}
 $btnBrowse = [Windows.Forms.Button]@{Text='+';Location='425,198';Size='30,24'}
