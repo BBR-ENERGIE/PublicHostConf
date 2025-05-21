@@ -4,4 +4,4 @@ serve conf file by link :
 - [telegraf.conf](https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/telegraf.conf)
 - [backup_grafana.sh](https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/backup_grafana.sh)
 - [change_db_grafana.sh](https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/change_db_grafana.sh)
-- [change_db_grafana.sh](https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/GrafanaBackupRestore.ps1)
+- [GrafanaBackupRestore.ps1](https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/GrafanaBackupRestore.ps1)
