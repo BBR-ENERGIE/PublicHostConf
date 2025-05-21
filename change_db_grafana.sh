@@ -20,6 +20,7 @@ fi
 # 🛑 Stoppe le conteneur
 echo "⏳ Arrêt du conteneur Docker '$CONTAINER_NAME'..."
 docker stop "$CONTAINER_NAME"
+mkdir -p "$VOLUME_PATH"
 cp "$DB_SOURCE" "$VOLUME_PATH/grafana.db"
 
 # ▶️ Redémarre le conteneur
