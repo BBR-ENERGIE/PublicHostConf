@@ -1,6 +1,6 @@
 #!/bin/bash
-docker stop grafana
+docker stop c_grafana
 mkdir -p /root/grafana/backup/
 rsync -a /var/lib/docker/volumes/v_grafana/_data/ /root/grafana/backup/
-docker start grafana
+docker start c_grafana
 zenity --info --text="✅ Sauvegarde terminée."
