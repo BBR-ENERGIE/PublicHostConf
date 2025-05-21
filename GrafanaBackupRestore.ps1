@@ -99,15 +99,15 @@ $btnGo.Add_Click({
 
         ## 3/4  envoie vers la cible
         Write-Log '>> 3/4  Envoie le dossier vers la cible …'
-        & ssh (Get-SshArgs @("$uD@$dst",'sudo mkdir -p /root/grafana/backup')) | Out-Null
+        & ssh -p 64891 (Get-SshArgs @("$uD@$dst",'sudo mkdir -p /root/grafana/backup')) | Out-Null
         $remoteDst = "${uD}@${dst}:/root/grafana/"
-        & scp (Get-SshArgs @('-r',"$localTmp\backup",$remoteDst)) | Out-Null
+        & scp -P 64891 (Get-SshArgs @('-r',"$localTmp\backup",$remoteDst)) | Out-Null
         Write-Log 'Dossier transféré.'
 
         ## 4/4  exécute script de restauration
         Write-Log '>> 4/4  Lance la restauration …'
         $cmdRestore = 'curl -sL https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/change_db_grafana.sh | sudo bash -'
-        & ssh (Get-SshArgs @("$uD@$dst",$cmdRestore)) | Out-Null
+        & ssh -p 64891 (Get-SshArgs @("$uD@$dst",$cmdRestore)) | Out-Null
         Write-Log 'Restauration terminée ✅'
 
         [Windows.Forms.MessageBox]::Show('Opération terminée !','Succès',
