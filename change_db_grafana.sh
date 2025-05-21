@@ -2,7 +2,7 @@
 
 # 🔧 Configuration
 VOLUME_PATH="/var/lib/docker/volumes/v_grafana/_data"
-DB_SOURCE="/root/grafana/backup/_data/grafana.db"
+DB_SOURCE="/root/grafana/backup/grafana.db"
 CONTAINER_NAME="c_grafana"
 
 # 📦 Vérifie que le fichier DB existe
