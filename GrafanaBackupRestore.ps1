@@ -83,7 +83,7 @@ $btnGo.Add_Click({
 
         ## 1/4  lance le backup
         Write-Log '>> 1/4  Lance le backup …'
-        $cmdBackup = 'curl -sL https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/backup_grafana.sh | sudo bash -'
+        $cmdBackup = 'curl -sL https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/backup_grafana.sh | bash -'
         & ssh (Get-SshArgs @("$uS@$src",$cmdBackup)) | Out-Null
         Write-Log 'Backup terminé.'
 
@@ -106,12 +106,12 @@ $btnGo.Add_Click({
 
         ## 4/4  exécute script de restauration
         Write-Log '>> 4/4  Lance la restauration …'
-        $cmdRestore = 'curl -sL https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/change_db_grafana.sh | sudo bash -'
+        $cmdRestore = 'curl -sL https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/change_db_grafana.sh | bash -'
         & ssh (Get-SshArgs @("$uD@$dst",$cmdRestore)) | Out-Null
         Write-Log 'Restauration terminée ✅'
         [Windows.Forms.MessageBox]::Show(
-            "Opération terminée !",
-            "Succès",
+            "Processus fini !",
+            "Ok",
             [Windows.Forms.MessageBoxButtons]::OK,
             [Windows.Forms.MessageBoxIcon]::Asterisk   
         )
