@@ -19,14 +19,14 @@ $lblIntro          = [Windows.Forms.Label]@{Text='Entrez les paramètres SSH :';
 $form.Controls.Add($lblIntro)
 
 # --- champs source
-$lblSrcHost = [Windows.Forms.Label]@{Text='Hôte SOURCE (IP/FQDN) :';Location='10,40';Size='200,20'}
+$lblSrcHost = [Windows.Forms.Label]@{Text='SOURCE (IP/FQDN) :';Location='10,40';Size='200,20'}
 $txtSrcHost = [Windows.Forms.TextBox]@{Location='220,40';Size='200,20'}
 $lblSrcUser = [Windows.Forms.Label]@{Text='Utilisateur SSH source :';Location='10,70';Size='200,20'}
 $txtSrcUser = [Windows.Forms.TextBox]@{Location='220,70';Size='200,20'}
 $form.Controls.AddRange(@($lblSrcHost,$txtSrcHost,$lblSrcUser,$txtSrcUser))
 
 # --- champs cible
-$lblDstHost = [Windows.Forms.Label]@{Text='Hôte CIBLE (IP/FQDN) :';Location='10,110';Size='200,20'}
+$lblDstHost = [Windows.Forms.Label]@{Text='CIBLE (IP/FQDN) :';Location='10,110';Size='200,20'}
 $txtDstHost = [Windows.Forms.TextBox]@{Location='220,110';Size='200,20'}
 $lblDstUser = [Windows.Forms.Label]@{Text='Utilisateur SSH cible :';Location='10,140';Size='200,20'}
 $txtDstUser = [Windows.Forms.TextBox]@{Location='220,140';Size='200,20'}
