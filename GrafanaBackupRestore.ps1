@@ -109,9 +109,13 @@ $btnGo.Add_Click({
         $cmdRestore = 'curl -sL https://raw.githubusercontent.com/BBR-ENERGIE/PublicHostConf/main/change_db_grafana.sh | sudo bash -'
         & ssh (Get-SshArgs @("$uD@$dst",$cmdRestore)) | Out-Null
         Write-Log 'Restauration terminée ✅'
-
-        [Windows.Forms.MessageBox]::Show('Opération terminée !','Succès',
-            [Windows.Forms.MessageBoxIcon]::Information)
+        [Windows.Forms.MessageBox]::Show(
+            "Opération terminée !",
+            "Succès",
+            [Windows.Forms.MessageBoxButtons]::OK,
+            [Windows.Forms.MessageBoxIcon]::Asterisk   
+        )
+       
     }
     catch{
         Write-Log "ERREUR : $_"
