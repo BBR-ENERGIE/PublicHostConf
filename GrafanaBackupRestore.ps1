@@ -11,7 +11,7 @@ Add-Type -AssemblyName System.Drawing
 
 # ------------------------------ UI ----------------------------------------
 $form              = New-Object Windows.Forms.Form
-$form.Text         = 'Grafana – Duplication de volume'
+$form.Text         = 'Grafana Duplication des Visualisations'
 $form.Size         = [Drawing.Size]::new(480,420)
 $form.StartPosition= 'CenterScreen'
 
